@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+//PRE-CLASS
+
+// import TodoList from './Pre-class/Components/TodoList';
+// import Todoinput from './Pre-class/Components/Todoinput';
+import "./App.css";
+
+//CLASS
+import CounterApp from "./Class/Pages/CounterApp";
+import Navbar from "./Class/Components/Navbar";
+import { Routes, Route } from "react-router-dom";
+import TodoApp from "./Class/Pages/TodoApp";
 
 function App() {
+  console.log("hi");
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* PRE-CLASS --TODO */}
+      {/* <Todoinput/>
+     <TodoList/> */}
+
+      {/* CLASS-TODO-APP && Counter-App */}
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<CounterApp />}></Route>
+        <Route path="/TodoApp" element={<TodoApp />}></Route>
+      </Routes>
     </div>
   );
 }
